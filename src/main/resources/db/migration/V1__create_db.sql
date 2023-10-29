@@ -1,3 +1,5 @@
+CREATE SCHEMA HW13;
+
 CREATE TABLE client (
                         id LONG AUTO_INCREMENT PRIMARY KEY,
                         name VARCHAR(200)

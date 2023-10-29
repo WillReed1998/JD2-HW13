@@ -3,6 +3,8 @@ package org.example.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.Date;
+
 @Entity
 @Table(name = "tickets")
 @Data
@@ -14,7 +16,7 @@ public class Ticket {
 
     @Column(name = "created_at")
     @Temporal(TemporalType.TIMESTAMP)
-    private String createdAt;
+    private Date createdAt;
 
     @ManyToOne
     @JoinColumn(name = "client_id")

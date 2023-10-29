@@ -7,12 +7,13 @@ import static org.example.Config.*;
 public class DatabaseMigration {
     public static void fwMigration(){
 
-        Flyway flyway = Flyway.configure()
+        Flyway.configure()
                 .dataSource(jdbcUrl, username, password)
-                .locations("classpath:db/migration")
+                .locations("classpath:src/main/resources/db/migration")
                 .baselineOnMigrate(true)
-                .load();
+                .load()
+                .migrate();
 
-        flyway.migrate();
+
     }
 }
