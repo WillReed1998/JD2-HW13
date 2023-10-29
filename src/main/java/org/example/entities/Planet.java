@@ -9,7 +9,7 @@ import lombok.Data;
 public class Planet {
     @Id
     @Column (name = "id", length = 50)
-    private Long id;
+    private String id;
 
     @Column(name = "name", length = 200)
     private String name;

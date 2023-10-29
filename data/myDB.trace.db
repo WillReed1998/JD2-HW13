@@ -63,7 +63,7 @@ org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The
 	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
 	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142)
 	at org.flywaydb.core.Flyway.migrate(Flyway.java:140)
-	at org.example.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
+	at org.example.flyway.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
 	at org.example.App.main(App.java:9)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.220/5]" [50000-220]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
@@ -95,7 +95,7 @@ org.h2.message.DbException: Unsupported database file version or invalid file he
 	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
 	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142)
 	at org.flywaydb.core.Flyway.migrate(Flyway.java:140)
-	at org.example.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
+	at org.example.flyway.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
 	at org.example.App.main(App.java:9)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Unsupported database file version or invalid file header in file "C:/Users/Nikko/IdeaProjects/JD2-HW13/data/myDB.mv.db" [90048-220]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
@@ -134,7 +134,7 @@ org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The
 	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
 	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142)
 	at org.flywaydb.core.Flyway.migrate(Flyway.java:140)
-	at org.example.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
+	at org.example.flyway.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
 	at org.example.App.main(App.java:9)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.220/5]" [50000-220]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
@@ -166,7 +166,7 @@ org.h2.message.DbException: Unsupported database file version or invalid file he
 	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
 	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142)
 	at org.flywaydb.core.Flyway.migrate(Flyway.java:140)
-	at org.example.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
+	at org.example.flyway.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
 	at org.example.App.main(App.java:9)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Unsupported database file version or invalid file header in file "C:/Users/Nikko/IdeaProjects/JD2-HW13/data/myDB.mv.db" [90048-220]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
@@ -289,7 +289,7 @@ org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The
 	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
 	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142)
 	at org.flywaydb.core.Flyway.migrate(Flyway.java:140)
-	at org.example.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
+	at org.example.flyway.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
 	at org.example.App.main(App.java:9)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.220/5]" [50000-220]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
@@ -321,7 +321,7 @@ org.h2.message.DbException: Unsupported database file version or invalid file he
 	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
 	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142)
 	at org.flywaydb.core.Flyway.migrate(Flyway.java:140)
-	at org.example.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
+	at org.example.flyway.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
 	at org.example.App.main(App.java:9)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Unsupported database file version or invalid file header in file "C:/Users/Nikko/IdeaProjects/JD2-HW13/data/myDB.mv.db" [90048-220]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
@@ -360,7 +360,7 @@ org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The
 	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
 	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142)
 	at org.flywaydb.core.Flyway.migrate(Flyway.java:140)
-	at org.example.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
+	at org.example.flyway.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
 	at org.example.App.main(App.java:9)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.220/5]" [50000-220]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
@@ -392,7 +392,7 @@ org.h2.message.DbException: Unsupported database file version or invalid file he
 	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
 	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142)
 	at org.flywaydb.core.Flyway.migrate(Flyway.java:140)
-	at org.example.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
+	at org.example.flyway.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
 	at org.example.App.main(App.java:9)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Unsupported database file version or invalid file header in file "C:/Users/Nikko/IdeaProjects/JD2-HW13/data/myDB.mv.db" [90048-220]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
@@ -494,7 +494,7 @@ org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The
 	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
 	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142)
 	at org.flywaydb.core.Flyway.migrate(Flyway.java:140)
-	at org.example.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
+	at org.example.flyway.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
 	at org.example.App.main(App.java:9)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.220/5]" [50000-220]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
@@ -526,7 +526,7 @@ org.h2.message.DbException: Unsupported database file version or invalid file he
 	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
 	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142)
 	at org.flywaydb.core.Flyway.migrate(Flyway.java:140)
-	at org.example.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
+	at org.example.flyway.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
 	at org.example.App.main(App.java:9)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Unsupported database file version or invalid file header in file "C:/Users/Nikko/IdeaProjects/JD2-HW13/data/myDB.mv.db" [90048-220]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
@@ -565,7 +565,7 @@ org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The
 	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
 	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142)
 	at org.flywaydb.core.Flyway.migrate(Flyway.java:140)
-	at org.example.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
+	at org.example.flyway.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
 	at org.example.App.main(App.java:9)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.220/5]" [50000-220]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
@@ -597,7 +597,7 @@ org.h2.message.DbException: Unsupported database file version or invalid file he
 	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
 	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142)
 	at org.flywaydb.core.Flyway.migrate(Flyway.java:140)
-	at org.example.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
+	at org.example.flyway.DatabaseMigration.fwMigration(DatabaseMigration.java:15)
 	at org.example.App.main(App.java:9)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Unsupported database file version or invalid file header in file "C:/Users/Nikko/IdeaProjects/JD2-HW13/data/myDB.mv.db" [90048-220]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)

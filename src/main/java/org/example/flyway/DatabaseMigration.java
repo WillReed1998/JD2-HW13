@@ -1,8 +1,8 @@
-package org.example;
+package org.example.flyway;
 
 import org.flywaydb.core.Flyway;
 
-import static org.example.Config.*;
+import static org.example.flyway.Config.*;
 
 public class DatabaseMigration {
     public static void fwMigration(){
