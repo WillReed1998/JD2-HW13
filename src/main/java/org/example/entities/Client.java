@@ -1,14 +1,15 @@
-package org.example;
+package org.example.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "planets")
+@Table(name = "clients")
 @Data
-public class Planet {
+public class Client {
     @Id
-    @Column (name = "id", length = 50)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column (name = "id")
     private Long id;
 
     @Column(name = "name", length = 200)
