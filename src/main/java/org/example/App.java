@@ -16,13 +16,13 @@ public class App {
         Client newClient = new Client();
         newClient.setName("Client11");
         clientCrudService.create(newClient);
-        clientCrudService.delete(newClient);
+        //clientCrudService.delete(newClient);
 
         PlanetCrudService planetCrudService = new PlanetCrudService();
         Planet newPlanet = new Planet();
         newPlanet.setId("PL6");
         newPlanet.setName("Planet6");
         planetCrudService.create(newPlanet);
-        planetCrudService.delete(newPlanet);
+        //planetCrudService.delete(newPlanet);
     }
 }
