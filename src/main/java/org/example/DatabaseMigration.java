@@ -9,7 +9,7 @@ public class DatabaseMigration {
 
         Flyway.configure()
                 .dataSource(jdbcUrl, username, password)
-                .locations("classpath:src/main/resources/db/migration")
+                //.locations("classpath:src/main/resources/db/migration")
                 .baselineOnMigrate(true)
                 .load()
                 .migrate();
