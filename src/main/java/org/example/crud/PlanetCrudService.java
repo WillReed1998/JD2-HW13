@@ -1,20 +1,20 @@
-package org.example.CRUD;
+package org.example.crud;
 
 import org.example.HibernateUtil;
-import org.example.entities.Client;
+import org.example.entities.Planet;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-public class ClientCrudService implements CRUD <Client> {
+public class PlanetCrudService implements CRUD <Planet>{
     private final SessionFactory sessionFactory =
             HibernateUtil.getInstance().getSessionFactory();
 
     @Override
-    public void create(Client client) {
+    public void create(Planet planet) {
         try (Session session = sessionFactory.openSession()) {
             Transaction transaction = session.beginTransaction();
-            session.persist(client);
+            session.persist(planet);
             transaction.commit();
         } catch (RuntimeException e) {
             e.printStackTrace();
@@ -22,32 +22,33 @@ public class ClientCrudService implements CRUD <Client> {
     }
 
     @Override
-    public Client read(Object id) {
+    public Planet read(Object id) {
         try (Session session = sessionFactory.openSession()) {
-            Client client = session.get(Client.class, id);
-            return client;
+            Planet planet = session.get(Planet.class, id);
+            return planet;
         }
     }
 
     @Override
-    public void update(Client client) {
-            try (Session session = sessionFactory.openSession()) {
-                Transaction transaction = session.beginTransaction();
-                session.merge(client);
-                transaction.commit();
-            } catch (RuntimeException e) {
-                e.printStackTrace();
-            }
+    public void update(Planet planet) {
+        try (Session session = sessionFactory.openSession()) {
+            Transaction transaction = session.beginTransaction();
+            session.merge(planet);
+            transaction.commit();
+        } catch (RuntimeException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
-    public void delete(Client client) {
+    public void delete(Planet planet) {
         try (Session session = sessionFactory.openSession()) {
             Transaction transaction = session.beginTransaction();
-            session.remove(client);
+            session.remove(planet);
             transaction.commit();
         } catch (RuntimeException e) {
             e.printStackTrace();
         }
     }
 }
+

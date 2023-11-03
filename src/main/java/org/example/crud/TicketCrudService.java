@@ -1,21 +1,23 @@
-package org.example.CRUD;
+package org.example.crud;
 
 import org.example.HibernateUtil;
-import org.example.entities.Client;
-import org.example.entities.Planet;
+import org.example.entities.Ticket;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-public class PlanetCrudService implements CRUD <Planet>{
+public class TicketCrudService implements CRUD <Ticket>{
     private final SessionFactory sessionFactory =
             HibernateUtil.getInstance().getSessionFactory();
 
     @Override
-    public void create(Planet planet) {
+    public void create(Ticket ticket) {
+        if (ticket == null || ticket.getToPlanet() == null || ticket.getFromPlanet() == null) {
+        throw new IllegalArgumentException("Client and planets not null");
+        }
         try (Session session = sessionFactory.openSession()) {
             Transaction transaction = session.beginTransaction();
-            session.persist(planet);
+            session.persist(ticket);
             transaction.commit();
         } catch (RuntimeException e) {
             e.printStackTrace();
@@ -23,18 +25,18 @@ public class PlanetCrudService implements CRUD <Planet>{
     }
 
     @Override
-    public Planet read(Object id) {
+    public Ticket read(Object id) {
         try (Session session = sessionFactory.openSession()) {
-            Planet planet = session.get(Planet.class, id);
-            return planet;
+            Ticket ticket = session.get(Ticket.class, id);
+            return ticket;
         }
     }
 
     @Override
-    public void update(Planet planet) {
+    public void update(Ticket ticket) {
         try (Session session = sessionFactory.openSession()) {
             Transaction transaction = session.beginTransaction();
-            session.merge(planet);
+            session.merge(ticket);
             transaction.commit();
         } catch (RuntimeException e) {
             e.printStackTrace();
@@ -42,14 +44,13 @@ public class PlanetCrudService implements CRUD <Planet>{
     }
 
     @Override
-    public void delete(Planet planet) {
+    public void delete(Ticket ticket) {
         try (Session session = sessionFactory.openSession()) {
             Transaction transaction = session.beginTransaction();
-            session.remove(planet);
+            session.remove(ticket);
             transaction.commit();
         } catch (RuntimeException e) {
             e.printStackTrace();
         }
     }
 }
-

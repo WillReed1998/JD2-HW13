@@ -1,6 +1,4 @@
-package org.example.CRUD;
-
-import java.util.List;
+package org.example.crud;
 
 public interface CRUD<T> {
     void create(T entity);

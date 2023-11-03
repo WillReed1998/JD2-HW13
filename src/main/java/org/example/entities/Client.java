@@ -15,3 +15,4 @@ public class Client {
     @Column(name = "name", length = 200)
     private String name;
 }
+
