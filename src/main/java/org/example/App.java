@@ -31,16 +31,20 @@ public class App {
 
         TicketCrudService ticketCrudService = new TicketCrudService();
         Ticket newTicket = new Ticket();
-        Client clientForTicket = clientCrudService.read(1);
-        Planet fromPlanetForTicket = planetCrudService.read("Planet4");
-        Planet toPlanetForTicket = planetCrudService.read("Planet5");
+        Client clientForTicket = clientCrudService.read("11");
+        Planet fromPlanetForTicket = planetCrudService.read("PL6");
+        Planet toPlanetForTicket = planetCrudService.read("PL5");
 
-        newTicket.setId("11");
-        newTicket.setCreatedAt(new Date(2023, 10, 29, 10, 0, 0));
-        newTicket.setClient(clientForTicket);
-        newTicket.setFromPlanet(fromPlanetForTicket);
-        newTicket.setToPlanet(toPlanetForTicket);
-        ticketCrudService.create(newTicket);
+        if (clientForTicket != null || fromPlanetForTicket != null || toPlanetForTicket != null) {
+            newTicket.setId("11");
+            newTicket.setCreatedAt(new Date(2023, 10, 29, 10, 0, 0));
+            newTicket.setClient(clientForTicket);
+            newTicket.setFromPlanet(fromPlanetForTicket);
+            newTicket.setToPlanet(toPlanetForTicket);
+            ticketCrudService.create(newTicket);
+        } else {
+            System.out.println("Client or planets not found.");
+        }
         //ticketCrudService.delete(newPlanet);
     }
 }

@@ -12,8 +12,8 @@ public class TicketCrudService implements CRUD <Ticket>{
 
     @Override
     public void create(Ticket ticket) {
-        if (ticket == null || ticket.getToPlanet() == null || ticket.getFromPlanet() == null) {
-        throw new IllegalArgumentException("Client and planets not null");
+        if (ticket == null || ticket.getClient() == null || ticket.getToPlanet() == null || ticket.getFromPlanet() == null) {
+        throw new IllegalArgumentException("Ticket, client and planets cannot be null");
         }
         try (Session session = sessionFactory.openSession()) {
             Transaction transaction = session.beginTransaction();
